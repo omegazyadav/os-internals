@@ -4,5 +4,5 @@
 /*function definition*/
 
 void myFunc(void){
-	printf("Body of the myFunc function");
+	printf("Body of the myFunc function!\n");
 }
