@@ -16,15 +16,29 @@ Uncomment the below section for compilation
 
 #make file - this is a comment section
 #setting the target
+#
+#CC=gcc    #compiler
+#TARGET=omega     #Target file name
+#
+#
+#all: 
+#	$(CC) main.c misc.c -o $(TARGET)
+#
+#clean:
+#	rm $(TARGET)
+#
 
-CC=gcc    #compiler
-TARGET=omega     #Target file name
 
 
-all: 
+#Makefile 3
+#make file -this is a comment section
+
+CC=gcc #compiler
+TARGET=hello       #target file name
+
+
+all:	main.o misc.o
 	$(CC) main.c misc.c -o $(TARGET)
 
 clean:
-	rm $(TARGET)
-
-
+	rm *.o $(TARGET)
