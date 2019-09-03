@@ -8,7 +8,7 @@ int main(void){
 
 	ssize_t nr;
 	unsigned long word;
-	int fd=open("foo.txt",O_WRONLY | O_CREAT | O_APPEND,0644);
+	int fd=open("foo.txt",O_WRONLY | O_APPEND,0644);
 	printf("fd=%d\n",fd);
 
 	if (fd==-1){
@@ -21,6 +21,6 @@ int main(void){
 		perror("Error:");
 	}
 	else
-		printf("Read Successfully!");
+		printf("Read Successfully! And the value of nr is %d",nr);
 	return 0;
 }
