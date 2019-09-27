@@ -6,6 +6,7 @@ int main()
 {
     char c[1000];
     //file pointer *fptr 
+
     FILE *fptr;
     if((fptr=fopen("file1.txt","w"))==NULL)
     {
@@ -18,9 +19,9 @@ int main()
     fgets(c,size,stdin);
     fprintf(fptr,"%s",c);
 
-    if ((fptr=fopen("file.txt","r"))==NULL)
+    if ((fptr=fopen("file1.txt","r"))==NULL)
     {
-        printf("Error!");
+        printf("Error occured!");
         exit(1);
     }
     fscanf(fptr,"%c",c);
