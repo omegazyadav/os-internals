@@ -4,7 +4,7 @@
 
 
 int main(void){
-	int fd=open("foo.txt", O_CREAT | O_WRONLY | O_TRUNC , 0644 );
+	int fd=open("foo", O_CREAT | O_WRONLY | O_TRUNC , 0644 );
 	printf("fd=%d\n",fd);
 
 	if (fd==-1){
