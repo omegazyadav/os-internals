@@ -8,13 +8,16 @@ int main()
     //file pointer *fptr 
 
     FILE *fptr;
-    if((fptr=fopen("file1.txt","w"))==NULL)
+    fptr=fopen("file1.txt","w");
+    
+    if(fptr==NULL)
     {
         printf("Error!");
          exit(1);
     }
 
     printf("Enter a sentence:\n");
+   
     //fgets takes exactly three arguments
     fgets(c,size,stdin);
     fprintf(fptr,"%s",c);
