@@ -7,7 +7,7 @@
 int main(int argc, char *args[])
 {
 	int fd;
-	fd=open("foo.txt",O_RDONLY, O_EXCL);
+	fd=open("foo.txt",O_RDONLY | O_EXCL);
 
 	if(fd==-1){
 		perror("Error!:");
