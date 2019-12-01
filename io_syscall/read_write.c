@@ -25,7 +25,8 @@ int main(void)
 
 	printf("The size of the byte is :%d\n",byte_write);
 
-	close(fd);
+	if(close(fd)==-1) /* What if the file descriptor is not opened at all :) */
+		errExit("Closing the fd error!"); 
 
 	return 0;
 }
