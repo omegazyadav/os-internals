@@ -8,10 +8,13 @@
 
 int main (int argc, char *argv[]) {
 	
-bool append=false;
+  bool append=false;
   int opt;
+
   while ((opt = getopt(argc, argv, "a")) != -1) {
-    if ((unsigned char) opt == 'a') { append = true; }
+    if ((unsigned char) opt == 'a') {
+	    append = true; 
+    }
   }
 
   if (optind >= argc) {
@@ -19,12 +22,13 @@ bool append=false;
   }
 
   int fd; 
-  fd= open(argv[optind],O_CREAT | O_WRONLY |O_APPEND,0666);
+  fd= open(argv[optind],O_CREAT | O_WRONLY |(append?O_APPEND:O_TRUNC),0666);
   if (fd == -1) 
 	  errExit("opening file %s", argv[optind]);
 
   ssize_t numRead;
   char buf[BUF_SIZE];
+
   while ((numRead = read(STDIN_FILENO, buf, BUF_SIZE)) > 0) {
     if (write(fd, buf, numRead) != numRead) {
       errExit("couldn't write whole buffer!");
