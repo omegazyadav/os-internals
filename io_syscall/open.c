@@ -4,12 +4,15 @@
 
 
 int main(void){
-	int fd=open("foo.txt",O_WRONLY | O_CREAT | O_APPEND);
+	int fd=open("hello.txt",O_RDONLY | O_CREAT,0644 );
+
 	printf("fd=%d\n",fd);
 
 	if (fd==-1){
 		perror("Program");
 		
+	}else{
+		printf("File opened successfully!\n");
 	}
 	return 0;
 }
