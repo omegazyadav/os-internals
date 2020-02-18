@@ -8,19 +8,16 @@ int main(void){
 
 	ssize_t nr;
 	unsigned long word;
-	int fd=open("foo.txt",O_WRONLY | O_APPEND,0644);
-	printf("fd=%d\n",fd);
+	int fd=open("foo.txt",O_RDWR | O_APPEND | O_CREAT,0644);
 
-	if (fd==-1){
-		perror("Program");
+	if (fd==-1)
+		perror("Could not open file.");
 		
-	}
 	nr=read(fd, &word,sizeof(unsigned long));
-	if (fd == -1){
-		//printf("Error in reading file:");
-		perror("Error:");
-	}
+	if (nr == -1)
+		perror("Error");	
 	else
-		printf("Read Successfully! And the value of nr is %d",nr);
+		printf("Read Successfully! And the value of nr is %d\n",nr);
+
 	return 0;
 }
