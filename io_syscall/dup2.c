@@ -18,7 +18,12 @@ int main(void){
 	 * The syntax for dup2 is dup2(int Old_fd, int new_fd) which takes the old file descriptor and create another user defined file descriptor
 	 */
 
-	int copy_desc=dup2(file_desc,4);
+	int copy_desc=dup2(file_desc,file_desc);
+	
+	if (copy_desc==-1)
+		printf("dup2() failed!\n");
+	else
+		printf("dup2() success!\n");
 
 	printf("The value of file descriptor are %d %d \n ",file_desc,copy_desc);
 

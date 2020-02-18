@@ -9,7 +9,7 @@ int main()
       
     if(file_desc < 0) 
         printf("Error opening the file\n"); 
-       
+    close(0)   ;
     int copy_desc = dup(file_desc); 
     printf("The value of file descritpor are : %d %d\n",file_desc,copy_desc) ;
 
