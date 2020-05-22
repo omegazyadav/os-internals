@@ -1,10 +1,15 @@
 # Linux System Programming 
 
-I am really focusing and learning the Linux kernel internals and for this I have been following some of the books as a reference. <br> 
+Learning how OS works and the working fundamental of Linux kernel is alwasys fun and frustating.  <br>
+
+Wish I could contribute to the kernel someday. <br>
+
+I have been following some of these books just to keep my dream alive. <br> 
+
 <pre>
 1. Advance Programming in the Unix Environment.
                              - W. Richard Stevans
-	                     - Stephen A. Rago
+    	                     - Stephen A. Rago
 
 2. The Linux Programming Interface.
 			- Michael Kerrisk 
@@ -13,7 +18,7 @@ I am really focusing and learning the Linux kernel internals and for this I have
 			- Robert Love 
 
 4. Linux Device Drivers.   
-			- Jonathan Crobt 
+			- Jonathan Corbet
 			- Greg Korah Hartman 
 			- Alessandro Rubini
 </pre>
